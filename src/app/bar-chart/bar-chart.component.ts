@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import zoomPlugin from 'chartjs-plugin-zoom';
 
 @Component({
   selector: 'app-bar-chart',
@@ -8,18 +9,18 @@ import { Chart } from 'chart.js/auto';
 })
 export class BarChartComponent implements OnInit {
 
-  public chart: any;
+  public barchart: any;
   
 
   constructor() { }
 
   ngOnInit(): void {
-    this.createChart();
+    this.createBarChart();
   }
 
-  createChart(){
+  createBarChart(){
   
-    const barChart = new Chart("MyChart", {
+    const barChart = new Chart("BarChart", {
       type: 'bar', //this denotes tha type of chart
 
       data: {// values on X-Axis
@@ -30,28 +31,46 @@ export class BarChartComponent implements OnInit {
             label: "Sales",
             data: ['469','576', '572', '79', '92',
 								 '574', '573', '576'],
-            backgroundColor: 'blue'
+            backgroundColor: 'blue',
+            borderWidth: 1,
           },
           {
             label: "Profit",
             data: ['542', '542', '536', '327', '17',
 									 '0.00', '538', '541'],
-            backgroundColor: 'limegreen'
+            backgroundColor: 'limegreen',
+            borderWidth: 1
           }  
         ]
-      },
+      }, 
       options: {
-        aspectRatio:2.5
+        indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
+        plugins: {
+          zoom: {
+            zoom: {
+              wheel: {
+                enabled: true,
+              },
+              pinch: {
+                enabled: true
+              },
+              mode: 'xy',
+            }
+          }
+        }
       }
+     
       
     });
+    Chart.register(zoomPlugin);
 
-    this.chart = barChart
+
+    this.barchart = barChart
 
   }
 
   ngOnDestroy(){
-    this.chart.destroy();
+    this.barchart.destroy();
 
   }
 

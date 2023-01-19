@@ -8,13 +8,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { ChartComponent } from './chart/chart.component';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { MixedChartComponent } from './mixed-chart/mixed-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
     LineChartComponent,
-    ChartComponent
+    ChartComponent,
+    HomeComponent,
+    NavComponent,
+    PieChartComponent,
+    MixedChartComponent
   ],
   imports: [
     BrowserModule,
