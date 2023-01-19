@@ -1,14 +1,25 @@
  
-.all-charts{
+ .all-charts{
    
-    display:flex;
-    flex-wrap: wrap;
-}
-.chart{
-    width:500px;
-    height:300px;
-    margin:40px;
+    margin: 15px;
 }
 
+.chart{
+     padding:30px;
+} 
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
 
 

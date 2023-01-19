@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+ 
 }
