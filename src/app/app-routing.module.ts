@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ChartComponent } from './chart/chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { MixedChartComponent } from './mixed-chart/mixed-chart.component';
+import { RandomComponent } from './random/random.component';
 
 const routes: Routes = [
   {path: 'chart', component: ChartComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'line', component: LineChartComponent},
   {path: 'pie', component: PieChartComponent},
   {path: 'mixedchart', component: MixedChartComponent},
+  {path: 'random', component: RandomComponent},
 
   {path: '', component: HomeComponent},
 

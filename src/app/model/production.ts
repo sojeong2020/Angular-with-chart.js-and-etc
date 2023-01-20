@@ -5,7 +5,9 @@ export interface Production {
     image_url:string,
     description:string,
     food_pairing:string[],
-    volume: Volume
+    volume: Volume,
+    method: any,
+    ingredients:any
 }
 
  interface Volume {

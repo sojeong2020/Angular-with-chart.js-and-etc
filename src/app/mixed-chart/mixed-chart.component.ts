@@ -20,7 +20,7 @@ export class MixedChartComponent implements OnInit {
   createMixedChart(){
   
     const mixedchart = new Chart("MixedChart", {
-      type: 'bar', 
+      
       data: {// values on X-Axis
         labels: ['2022-05-10', '2022-05-11', '2022-05-12','2022-05-13',
 								 '2022-05-14', '2022-05-15', '2022-05-16','2022-05-17', ], 
@@ -31,27 +31,29 @@ export class MixedChartComponent implements OnInit {
             label: "Sales",
             data: ['469','576', '572', '79', '92',
 								 '574', '573', '576'],
-            backgroundColor: 'blue'
+            backgroundColor: 'pink'
           },
-          {
+            {
+            type:'bar',
             label: "Profit",
             data: ['542', '542', '536', '327', '17',
 									 '0.00', '538', '541'],
-            backgroundColor: 'limegreen'
-          },  
+            backgroundColor: 'red'
+          },    
           {
             type:'line',
             label: "Sales",
             data: ['467','576', '572', '79', '92',
 								 '574', '573', '576'],
-            backgroundColor: 'blue'
+            backgroundColor: 'limegreen'
           },
-          {
+           {
+            type:'line',
             label: "Profit",
             data: ['542', '542', '536', '327', '17',
 									 '0.00', '538', '541'],
-            backgroundColor: 'limegreen'
-          }  
+            backgroundColor: 'darkgreen'
+          }     
         ]
       },
       options: {

@@ -1,18 +1,25 @@
 <app-nav></app-nav>
 
-<!-- <div class="chart-list container">
-  <a class="menu flex" routerLink="/bar" routerLinkActive="activebutton">Bar chart</a>
-  <a class="menu flex" routerLink="/line" routerLinkActive="activebutton">Line chart</a>
-  <a class="menu flex" routerLink="/pie" routerLinkActive="activebutton">Pie chart</a>
-  <a class="menu flex" routerLink="/mixedchart" routerLinkActive="activebutton">Mixed chart</a>
-
-</div> -->
-<app-random></app-random>
+<section class="all-charts">
   
-<app-barpunk-chart></app-barpunk-chart>
+  <div class='row'>
+    <div class='column'>
+      <div class="chart">
+       <app-barpunk-chart></app-barpunk-chart>
+      </div>
+    </div>
 
-<app-linepunk-chart></app-linepunk-chart>
+  <div class='column'>
+    <div class="chart">
+      <app-linepunk-chart></app-linepunk-chart>
+    </div>
+   </div>
 
-<app-mixedpunk-chart></app-mixedpunk-chart>
+  <div class='column'>
+    <div class="chart">
+     <app-mixedpunk-chart></app-mixedpunk-chart>
+    </div>
+    </div>  
+  </div>
 
-<app-piepunk-chart></app-piepunk-chart>
+</section> 

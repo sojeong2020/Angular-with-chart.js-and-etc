@@ -1,20 +1,17 @@
 
 
+<!--   <button (click)="onClickRandomBeers()">Random</button> 
+ -->
+<div class="container" >
 
-<div class="container">
-    <button (click)="onClickRandomBeers()">Random</button> 
-    <ul class="flex-item" *ngFor="let beer of randomBeers">
-      <div class="card">
+  <h2>Pie chart</h2> 
+  <h3>Random IPA  -  {{beerName}}</h3>  
+  <button (click)="onClickRandomBeers()">Random IPA</button>
   
-      <div class="card-content">
-        <p class="card-title"> <span>ID {{beer.id}}</span> {{beer.name}}</p>  
-        <p>{{beer.description}}</p>
-      </div> 
-      
-      </div>
-    </ul>
-  
-    
-  
-    
+</div>
+
+<div>
+  <div class="chart-container">
+      <canvas id="PieRandomChart">{{ pierandomchart }}</canvas>
   </div>
+</div>

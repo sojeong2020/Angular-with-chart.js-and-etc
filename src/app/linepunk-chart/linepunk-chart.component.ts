@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Chart } from 'chart.js/auto';
+import { DataService } from '../data.service';
+import { Production } from '../model/production';
+import zoomPlugin from 'chartjs-plugin-zoom';
 
 @Component({
   selector: 'app-linepunk-chart',
@@ -7,9 +11,68 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinepunkChartComponent implements OnInit {
 
-  constructor() { }
+  beers: Production[]=[];
+  beerName: any;
+  beerPh: any;
+  linepunkchart: any=[];
 
-  ngOnInit(): void {
-  }
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.dataService.getBeers().subscribe(data => {
+    this.beers = data
+      console.log(data,"data!!!")
+    this.beerName = data.map(beer=>beer.name).slice(0,6)
+      console.log(this.beerName,"this.beerName!!!")
+    this.beerPh = data.map(beer => beer.ph).slice(0,6)
+    console.log(this.beerPh,"this.beerPh!!!")
+
+     //show line chart data
+
+     this.linepunkchart =  new Chart('LinePunkChart',{
+      type:'line',
+      data: {
+        labels: this.beerName,
+        datasets:[
+          {
+            label:'Beer PH',
+            data: this.beerPh,
+            borderWidth:1,
+            backgroundColor:'green',
+            borderColor:'pink'
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
+        plugins: {
+          zoom: {
+            zoom: {
+              wheel: {
+                enabled: true,
+              },
+              pinch: {
+                enabled: true
+              },
+              mode: 'xy',
+            }
+          }
+        }
+      }
+
+
+     }
+     )
+    
+
+  });
+    Chart.register(zoomPlugin);
+
+  } 
+    
+
+  
+
 
 }

@@ -44,7 +44,7 @@ constructor(private dataService: DataService) { }
         ]
       },
       options: {
-        indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
+        indexAxis: 'y', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
             zoom: {
@@ -64,13 +64,8 @@ constructor(private dataService: DataService) { }
      }
      )
      
-
-    
-
-    });
+  });
     Chart.register(zoomPlugin);
   } 
     
-  
-
 }
