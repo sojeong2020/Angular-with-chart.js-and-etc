@@ -1,6 +1,90 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
     <a class="menu" routerLink="/" routerLinkActive="activebutton">Home</a>
     <a class="menu" routerLink="/chart" routerLinkActive="activebutton">PUNK API Chart</a>
-<!--     <a class="menu" routerLink="/random" routerLinkActive="activebutton">Random Pie Chart</a>
- -->
- </mat-toolbar>
+ </mat-toolbar> -->
+ <nav class="sidebar">
+    <div class="text">CoachKinetic</div>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/chart">Chart</a></li>
+        <li>
+            <a class="menu" (click)="toggleSessionMenu()" routerLink="/">sessions<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="sessionCollapsed" >
+            <ul>
+                <li><a routerLink="/">Create Booking</a></li>
+                <li><a routerLink="/">Coach Schedule</a></li>
+                <li><a routerLink="/">Booking Calendar</a></li>
+                <li><a routerLink="/">Check Off Sessions</a></li>
+                <li><a routerLink="/">Search Sessions</a></li>
+                <li><a routerLink="/">Ending Bookings</a></li>
+            </ul>
+        </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleCustomerMenu()" routerLink="/">Customers<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="customerCollapsed" >
+            <ul>
+                <li><a routerLink="/">View & Edit</a></li>
+                <li><a routerLink="/">Add Customer</a></li>
+                <li><a routerLink="/">Summary</a></li>
+                <li><a routerLink="/">Invoicing</a></li>
+                <li><a routerLink="/">Proforma Invoices</a></li>
+                <li><a routerLink="/">Outstanding Invoices</a></li>
+            </ul>
+        </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleProviderMenu()" routerLink="/">Providers<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="providerCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleCoachMenu()" routerLink="/">Coaches<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="coachCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                    <li><a routerLink="/">Summary</a></li>
+                    <li><a routerLink="/">Invoicing</a></li>
+                    <li><a routerLink="/">Proforma Invoices</a></li>
+                    <li><a routerLink="/">Outstanding Invoices</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleActivityMenu()" routerLink="/">Activities<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="activityCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleVenueMenu()" routerLink="/">Venues<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="venueCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleManagementMenu()" routerLink="/">Management<mat-icon class="nav-icon">arrow_drop_down</mat-icon></a>
+            <ng-container *ngIf="managementCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                    <li><a routerLink="/">Summary</a></li>
+                    <li><a routerLink="/">Invoicing</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li ><a class="logout" routerLink="/">Logout</a></li>
+
+    </ul>
+ </nav>
