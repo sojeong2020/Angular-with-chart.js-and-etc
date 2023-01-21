@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
+  collapsed: boolean = false;
+
 
   constructor() { }
 
@@ -14,5 +16,8 @@ export class ChartComponent implements OnInit {
     
   }
 
- 
+  togglesideBar(){
+    this.collapsed = !this.collapsed;
+  }
+  
 }

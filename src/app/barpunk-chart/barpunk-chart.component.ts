@@ -35,7 +35,7 @@ constructor(private dataService: DataService) { }
         labels: this.beerName,
         datasets:[
           {
-            label:'Beer PH',
+            label:'PH',
             data: this.beerPh,
             borderWidth:1,
             backgroundColor:'green',
@@ -44,7 +44,7 @@ constructor(private dataService: DataService) { }
         ]
       },
       options: {
-        indexAxis: 'y', //indexAxis: 'y' it is horizontal bar chart
+        indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
             zoom: {

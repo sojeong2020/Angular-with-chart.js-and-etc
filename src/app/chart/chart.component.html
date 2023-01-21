@@ -1,8 +1,15 @@
-<app-nav></app-nav>
+<div id="grid-container">
 
-<h1>Charts with PUNK APIs</h1>
+  <div id="sidenav" [ngClass]="{'activeCollapsed':collapsed}">
+    <app-nav></app-nav>
+   </div>
+
+ <div id="content" [ngClass]="{'activeCollapsed':collapsed}">
+
  
 <div class="all-charts">
+  <h3 class="page-title">Charts with PUNK APIs</h3>
+
 <div class='row'>
     <div class='column'>
       <div class="chart">
@@ -30,5 +37,11 @@
       </div>
       </div>  
 </div>
-
+</div>
 </div> 
+</div>
+
+<button id="toggle-sidebar" 
+(click)="togglesideBar()">
+<span class="toggle-span">{{collapsed ? '>': '<'}}</span>
+</button>

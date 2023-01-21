@@ -1,9 +1,15 @@
-<app-nav></app-nav>
+<div id="grid-container">
 
-<h1>Home</h1>
+  <div id="sidenav" [ngClass]="{'activeCollapsed':collapsed}">
+   <app-nav></app-nav>
+  </div>
 
-<div class="all-charts">
- <div class='row'>
+ <div id="content" [ngClass]="{'activeCollapsed':collapsed}">
+      
+  <div class="all-charts">
+      <h3 class="page-title">Home</h3>
+
+  <div class='row'>
     <div class='column'>
     <div class="chart">
           <app-bar-chart></app-bar-chart>
@@ -15,7 +21,8 @@
           <app-line-chart></app-line-chart>
     </div>
     </div> 
- </div>  
+  </div> 
+
  <div class='row'>
     <div class='column'>
     <div class="chart">
@@ -28,10 +35,15 @@
     <app-mixed-chart></app-mixed-chart>
     </div> 
     </div> 
-    
  </div>
-</div> 
+
+ </div> 
+</div>
+
+</div>
 
 
-
-
+<button id="toggle-sidebar" 
+(click)="togglesideBar()">
+<span class="toggle-span">{{collapsed ? '>': '<'}}</span>
+</button>
