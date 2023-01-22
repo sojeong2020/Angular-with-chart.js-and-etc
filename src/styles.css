@@ -18,7 +18,9 @@ body {
    }
 
 .page-title{
-     margin-left:40px;
+     margin-left:60px;
+     padding-top:10px;
+
      color:#1D3557;
 }
 
@@ -71,7 +73,7 @@ body {
   transform: scale(0);
   cursor: pointer;
   position: absolute;
-  top: 17px;
+  top: 15px;
   left: 10px;
   border: 3px solid white;
   width: 36px;
@@ -95,7 +97,13 @@ body {
       #toggle-sidebar {
         transform: scale(1);
         z-index:11; /* to show up , I need higher value  as z-index */
-      }
+
+     }
+     .page-title{
+          padding-left:80px;
+          padding-top:20px;
+
+     }
     
     /* this rule sets both the sidebar and content to occupy the 1-3 columns (ie full width) 
     and will put the sidebar on top of the content area*/

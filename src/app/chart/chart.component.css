@@ -2,6 +2,9 @@
 .all-charts{
    
     margin: 15px;
+    background-color: aliceblue;
+    border-radius: 15px;
+
 }
 
 .chart{

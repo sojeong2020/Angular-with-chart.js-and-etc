@@ -1,5 +1,8 @@
 .all-charts{
    margin: 18px;
+   border-radius: 15px;
+   background-color: aliceblue;
+   border-radius: 15px;
 }
 
 .chart{
