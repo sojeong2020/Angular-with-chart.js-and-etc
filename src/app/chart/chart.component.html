@@ -1,4 +1,10 @@
+
+
 <div id="grid-container">
+
+  <div id="navtop">
+    <app-top-nav></app-top-nav>
+  </div>
 
   <div id="sidenav" [ngClass]="{'activeCollapsed':collapsed}">
     <app-nav></app-nav>
@@ -41,7 +47,12 @@
 </div> 
 </div>
 
-<button id="toggle-sidebar" 
+<!-- <button id="toggle-sidebar" 
 (click)="togglesideBar()">
 <span class="toggle-span">{{collapsed ? '>': '<'}}</span>
+</button> -->
+
+<button id="toggle-sidebar" 
+(click)="togglesideBar()">
+<mat-icon>menu</mat-icon>
 </button>

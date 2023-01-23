@@ -12,7 +12,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { ChartComponent } from './chart/chart.component';
 import { HomeComponent } from './home/home.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './navigations/nav/nav.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { MixedChartComponent } from './mixed-chart/mixed-chart.component';
 import { BarpunkChartComponent } from './barpunk-chart/barpunk-chart.component';
@@ -20,6 +20,7 @@ import { LinepunkChartComponent } from './linepunk-chart/linepunk-chart.componen
 import { MixedpunkChartComponent } from './mixedpunk-chart/mixedpunk-chart.component';
 import { PiepunkChartComponent } from './piepunk-chart/piepunk-chart.component';
 import { RandomComponent } from './random/random.component';
+import { TopNavComponent } from './navigations/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RandomComponent } from './random/random.component';
     LinepunkChartComponent,
     MixedpunkChartComponent,
     PiepunkChartComponent,
-    RandomComponent
+    RandomComponent,
+    TopNavComponent
   ],
   imports: [
     BrowserModule,
