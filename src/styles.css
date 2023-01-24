@@ -13,8 +13,8 @@ body {
 *{
      margin:0;
      padding:0;
-     user-select:none;
-     box-sizing:border-box;
+/*      user-select:none;
+ */     box-sizing:border-box;
    }
 
 .page-title{
@@ -34,8 +34,8 @@ body {
     grid-row:1;
     grid-column-start: 1;
     grid-column-end: 3;
-
 } 
+
 #sidenav{
     grid-row: 2;
     grid-column: 1;

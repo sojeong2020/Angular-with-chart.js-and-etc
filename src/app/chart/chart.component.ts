@@ -18,6 +18,7 @@ export class ChartComponent implements OnInit {
 
   togglesideBar(){
     this.collapsed = !this.collapsed;
-  }
+  } 
+ 
   
 }

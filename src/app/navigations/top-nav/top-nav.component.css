@@ -1,58 +1,68 @@
+/* #F1FAEE; #A8DADC; #457B9D; #1D3557; */
+
+
 .topnav {
-    list-style: none;
-    overflow: hidden;
-    background: #A8DADC;   /* #F1FAEE; #A8DADC; #457B9D; #1D3557; */
-    height:auto;
-    font-size: 1.5rem;
-  } 
+  list-style: none;
+  overflow: hidden;
+  height:auto;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #457B9D; 
+
+} 
 
 .topnav ul{
-  float: right;
+float: right;
 } 
 .topnav li {
-    float:left;
-    display: block;
-   /*  color: rgb(225, 233, 214);
-    text-decoration: none; */
-    font-size: 17px;
-    line-height: 50px;
-    padding:0 20px;
+  float:left;
+  display: block;
+ 
+  font-size: 17px;
+  line-height: 50px;
+  padding:0 20px;
 
 }
 .topnav ul li:hover{
-    color: #E63946;
-    background-color: #ddd;
+  color: #E63946;
+  background-color: #ddd;
 
 }
 .topnav ul li a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .topnav .topnav-menu .hamburger-menu{
-    display:none;
+  display:none;
 }
 
 
-@media screen and (max-width: 640px) {
-    .topnav li{
-      display: none;
-    }
-    .topnav .topnav-menu .hamburger-menu{
-      display: block;
-      position: absolute;
-      cursor: pointer;
-      right:20px;
-      top: 4px;
-      color: #1D3557;
-      font-size: 2rem;
-    } 
-    .activeCollapsed ul {
-      float:none;
-      text-align: center;
-    }
-     
-    .activeCollapsed li {
-      float:none;
-      display:block;
-    }
-}
+@media screen and (max-width: 900px) {
+  .topnav{
+   border-bottom: 1px solid #A8DADC;
+ 
+  }
+  .topnav li{
+    display: none;
+  }
+  .topnav .topnav-menu .hamburger-menu{
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right:20px;
+    top: 4px;
+    color: #1D3557;
+    font-size: 2rem;
+  } 
+  .activeCollapsed ul {
+    float:none;
+    text-align: center;
+  }
+   
+  .activeCollapsed li {
+    float:none;
+    display:block;
+  }
+} 
+
+
+

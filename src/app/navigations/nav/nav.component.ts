@@ -15,6 +15,9 @@ export class NavComponent implements OnInit {
   venueCollapsed: boolean = false;
   managementCollapsed: boolean = false;
 
+
+collapsed: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -42,6 +45,11 @@ export class NavComponent implements OnInit {
     this.managementCollapsed = !this.managementCollapsed;
   }
   
+   togglesideBar(){
+    this.collapsed = !this.collapsed;
+  } 
+
+ 
  
 
 }
