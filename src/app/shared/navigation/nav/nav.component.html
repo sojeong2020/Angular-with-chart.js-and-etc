@@ -1,0 +1,86 @@
+ <nav class="sidebar">
+    <div class="text">CoachKinetic</div>
+    <ul>
+        <li><a routerLink="/"><mat-icon class="nav-menu-icon">home</mat-icon>Home</a></li>
+        <li><a routerLink="/chart"><mat-icon class="nav-menu-icon">equalizer</mat-icon>Chart PUNK APIs</a></li>
+        <li>
+            <a class="menu" (click)="toggleSessionMenu()"><mat-icon class="nav-menu-icon">library_books</mat-icon>sessions<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="sessionCollapsed" >
+            <ul>
+                <li><a routerLink="/session/CreateBooking">Create Booking</a></li>
+                <li><a routerLink="/session/CoachSchedule">Coach Schedule</a></li>
+                <li><a routerLink="/session/BookingCalendar">Booking Calendar</a></li>
+                <li><a routerLink="/session/CheckOffSessions">Check Off Sessions</a></li>
+                <li><a routerLink="/session/SearchSession">Search Sessions</a></li>
+                <li><a routerLink="/session/EndingBookings">Ending Bookings</a></li>
+            </ul>
+        </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleCustomerMenu()"><mat-icon class="nav-menu-icon">person_outline</mat-icon>Customers<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="customerCollapsed" >
+            <ul>
+                <li><a routerLink="/">View & Edit</a></li>
+                <li><a routerLink="/">Add Customer</a></li>
+                <li><a routerLink="/">Summary</a></li>
+                <li><a routerLink="/">Invoicing</a></li>
+                <li><a routerLink="/">Proforma Invoices</a></li>
+                <li><a routerLink="/">Outstanding Invoices</a></li>
+            </ul>
+        </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleProviderMenu()"><mat-icon  class="nav-menu-icon">work_outline</mat-icon>Providers<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="providerCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleCoachMenu()"><mat-icon class="nav-menu-icon"> insert_emoticon</mat-icon>Coaches<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="coachCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                    <li><a routerLink="/">Summary</a></li>
+                    <li><a routerLink="/">Invoicing</a></li>
+                    <li><a routerLink="/">Proforma Invoices</a></li>
+                    <li><a routerLink="/">Outstanding Invoices</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleActivityMenu()"><mat-icon class="nav-menu-icon">view_module</mat-icon>Activities<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="activityCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleVenueMenu()"><mat-icon class="nav-menu-icon">where_to_vote</mat-icon>Venues<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="venueCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li>
+            <a class="menu" (click)="toggleManagementMenu()"><mat-icon class="nav-menu-icon">supervised_user_circle</mat-icon>Management<mat-icon class="nav-icon">chevron_right</mat-icon></a>
+            <ng-container *ngIf="managementCollapsed" >
+                <ul>
+                    <li><a routerLink="/">View & Edit</a></li>
+                    <li><a routerLink="/">Add Customer</a></li>
+                    <li><a routerLink="/">Summary</a></li>
+                    <li><a routerLink="/">Invoicing</a></li>
+                </ul>
+            </ng-container>
+        </li>
+        <li ><a class="logout" routerLink="/"><mat-icon  class="nav-menu-icon">logout</mat-icon>Logout</a></li>
+
+    </ul>
+ </nav>

@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
-import { LineChartComponent } from './line-chart/line-chart.component';
-import { HomeComponent } from './home/home.component';
-import { ChartComponent } from './chart/chart.component';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
-import { MixedChartComponent } from './mixed-chart/mixed-chart.component';
-import { RandomComponent } from './random/random.component';
+
+import { HomeComponent } from './feature/chartHome/home/home.component';
+import { ChartComponent } from './feature/chartPunk/chart/chart.component';
+import { CalendarComponent } from './feature/calendar/calendar.component';
 
 const routes: Routes = [
-  {path: 'chart', component: ChartComponent},
-  {path: 'bar', component: BarChartComponent},
-  {path: 'line', component: LineChartComponent},
-  {path: 'pie', component: PieChartComponent},
-  {path: 'mixedchart', component: MixedChartComponent},
-  {path: 'random', component: RandomComponent},
 
-  {path: '', component: HomeComponent},
+  {path: 'chart', component: ChartComponent},
+  {path: 'calendar', component: CalendarComponent},
+  
+  {path: 'session', loadChildren:()=> 
+   import('./feature/session/session.module')
+   .then((m)=> m.SessionModule)},
+  {path: 'customer', loadChildren:()=> 
+   import('./feature/customer/customer.module')
+   .then((m)=> m.CustomerModule)},
+
+   {path: '', component: HomeComponent},
+
 
 
 ];

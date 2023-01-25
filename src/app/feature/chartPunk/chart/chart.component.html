@@ -1,0 +1,61 @@
+
+
+<div id="grid-container">
+
+ <div id="navtop">
+    <app-top-nav></app-top-nav>
+  </div>
+
+  <div id="sidenav" [ngClass]="{'activeCollapsed':collapsed}">
+    <app-nav></app-nav>
+  </div> 
+
+<div id="content" [ngClass]="{'activeCollapsed':collapsed}">
+
+  <div>
+<h4 class="page-title">Chart PUNK APIs</h4>
+
+<div class="all-contents">
+
+<div class='row'>
+    <div class='column'>
+      <div class="chart">
+       <app-barpunk-chart></app-barpunk-chart>
+      </div>
+    </div>
+
+  <div class='column'>
+    <div class="chart">
+      <app-linepunk-chart></app-linepunk-chart>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='column'>
+    <div class="chart">
+     <app-mixedpunk-chart></app-mixedpunk-chart>
+    </div>
+    </div>  
+
+    <div class='column'>
+      <div class="chart">
+       <app-random></app-random>
+      </div>
+    </div>
+  </div>
+    
+</div>
+</div>
+</div> 
+</div>
+
+<!-- <button id="toggle-sidebar" 
+(click)="togglesideBar()">
+<span class="toggle-span">{{collapsed ? '>': '<'}}</span>
+</button> -->
+
+<button id="toggle-sidebar" 
+(click)="togglesideBar()">
+<mat-icon>menu</mat-icon>
+</button> 
