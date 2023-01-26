@@ -20,12 +20,12 @@
             <a class="menu" (click)="toggleCustomerMenu()"><mat-icon class="nav-menu-icon">person_outline</mat-icon>Customers<mat-icon class="nav-icon">chevron_right</mat-icon></a>
             <ng-container *ngIf="customerCollapsed" >
             <ul>
-                <li><a routerLink="/">View & Edit</a></li>
-                <li><a routerLink="/">Add Customer</a></li>
-                <li><a routerLink="/">Summary</a></li>
-                <li><a routerLink="/">Invoicing</a></li>
-                <li><a routerLink="/">Proforma Invoices</a></li>
-                <li><a routerLink="/">Outstanding Invoices</a></li>
+                <li><a routerLink="/customer/viewEdit">View & Edit</a></li>
+                <li><a routerLink="/customer/addCustomer">Add Customer</a></li>
+                <li><a routerLink="/customer/summary">Summary</a></li>
+                <li><a routerLink="/customer/invoicing">Invoicing</a></li>
+                <li><a routerLink="/customer/proformaInvoices">Proforma Invoices</a></li>
+                <li><a routerLink="/customer/outstandingInvoices">Outstanding Invoices</a></li>
             </ul>
         </ng-container>
         </li>

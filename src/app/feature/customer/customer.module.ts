@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavModule } from 'src/app/shared/navigation/nav/nav.module';
+import { TopNavModule } from 'src/app/shared/navigation/top-nav/top-nav.module';
+import { MatIconModule } from '@angular/material/icon'
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerHomeComponent } from './customer-home/customer-home.component';
@@ -23,7 +26,20 @@ import { ViewEditComponent } from './view-edit/view-edit.component';
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    NavModule,
+    TopNavModule,
+    MatIconModule
+  ],
+  exports:[
+    CustomerHomeComponent,
+    AddCustomerComponent,
+    InvoicingComponent,
+    OutstandingInvoicingComponent,
+    ProformaInvoicingComponent,
+    SummaryComponent,
+    ViewEditComponent
+
   ]
 })
 export class CustomerModule { }

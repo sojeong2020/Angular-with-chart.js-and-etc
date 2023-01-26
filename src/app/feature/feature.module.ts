@@ -44,7 +44,7 @@ import { RandomComponent } from './chartPunk/random/random.component';
     TopNavModule,
     MatIconModule,
     SessionModule,
-    //CustomerModule
+    CustomerModule
   ],
   exports:[
     CalendarComponent,
