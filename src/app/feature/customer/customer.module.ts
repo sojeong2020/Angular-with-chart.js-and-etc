@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavModule } from 'src/app/shared/navigation/sidebar/nav.module';
 import { TopNavModule } from 'src/app/shared/navigation/top-nav/top-nav.module';
-import { MatIconModule } from '@angular/material/icon'
-
+import { AngularMaterialModule } from 'src/app/shared/navigation/angular-material.module';
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerHomeComponent } from './customer-home/customer-home.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
@@ -29,8 +28,8 @@ import { ViewEditComponent } from './view-edit/view-edit.component';
     CustomerRoutingModule,
     NavModule,
     TopNavModule,
-    MatIconModule
-  ],
+    AngularMaterialModule
+    ],
   exports:[
     CustomerHomeComponent,
     AddCustomerComponent,

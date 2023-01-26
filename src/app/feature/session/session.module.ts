@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SessionRoutingModule } from './session-routing.module';
-
-import { MatIconModule } from '@angular/material/icon'
+import { AngularMaterialModule } from 'src/app/shared/navigation/angular-material.module';
 import { NavModule } from 'src/app/shared/navigation/sidebar/nav.module';
 import { TopNavModule } from 'src/app/shared/navigation/top-nav/top-nav.module';
 
@@ -27,9 +26,9 @@ import { SearchSessionComponent } from './search-session/search-session.componen
   imports: [
     CommonModule,
     SessionRoutingModule,
-    MatIconModule,
     NavModule,
-    TopNavModule
+    TopNavModule,
+    AngularMaterialModule
 
   ],  
   exports:[

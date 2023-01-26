@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon'
+import { RouterModule } from '@angular/router';
+import { AngularMaterialModule } from '../shared/navigation/angular-material.module';
 
 import { SessionModule } from './session/session.module';
 import { CustomerModule } from './customer/customer.module';
@@ -20,6 +21,8 @@ import { LinepunkChartComponent } from './chartPunk/linepunk-chart/linepunk-char
 import { MixedpunkChartComponent } from './chartPunk/mixedpunk-chart/mixedpunk-chart.component';
 import { PiepunkChartComponent } from './chartPunk/piepunk-chart/piepunk-chart.component';
 import { RandomComponent } from './chartPunk/random/random.component';
+import { TableComponent } from './index/table/table.component';
+import { CardComponent } from './index/card/card.component';
 
 @NgModule({
   declarations: [
@@ -34,17 +37,18 @@ import { RandomComponent } from './chartPunk/random/random.component';
     LinepunkChartComponent,
     MixedpunkChartComponent,
     PiepunkChartComponent,
-    RandomComponent, 
-    
-
+    RandomComponent,
+    TableComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
     NavModule,
     TopNavModule,
-    MatIconModule,
+    AngularMaterialModule,
     SessionModule,
-    CustomerModule
+    CustomerModule,
+    RouterModule
   ],
   exports:[
     CalendarComponent,
@@ -59,6 +63,9 @@ import { RandomComponent } from './chartPunk/random/random.component';
     MixedpunkChartComponent,
     PiepunkChartComponent,
     RandomComponent, 
+    TableComponent,
+    CardComponent
+
   ]
 })
 export class FeatureModule { }
