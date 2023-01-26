@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SessionRoutingModule } from './session-routing.module';
 
 import { MatIconModule } from '@angular/material/icon'
-import { NavModule } from 'src/app/shared/navigation/nav/nav.module';
+import { NavModule } from 'src/app/shared/navigation/sidebar/nav.module';
 import { TopNavModule } from 'src/app/shared/navigation/top-nav/top-nav.module';
 
 import { CreateBookingComponent } from './create-booking/create-booking.component';

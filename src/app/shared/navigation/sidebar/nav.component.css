@@ -18,17 +18,17 @@
     letter-spacing: 1px;
     padding-bottom: 20px;
 }
-nav ul{
+aside ul{
     background-color: white;
     height:100%;
     width:100%;
     list-style: none;
 }
-nav ul li{
+aside ul li{
     line-height: 60px;
    /*  border-bottom: 1px solid #A8DADC; */
 }
-nav ul li a{
+aside ul li a{
     position: relative;
     color:#1D3557;
     text-decoration: none;
@@ -38,29 +38,29 @@ nav ul li a{
     display:block;
     width:100%;
 }
-nav ul li a:hover{
+aside ul li a:hover{
     color:white;
     background: #E63946;
     font-weight: 600;
     border-radius: 3px;
 } 
-nav ul li .menu:hover{
+aside ul li .menu:hover{
     color:#E63946;
     background: white;
 }
-nav ul ul{
+aside ul ul{
     position:static;
 }
-nav ul ul li{
+aside ul ul li{
     line-height: 42px;
     border-bottom: none;
 }
-nav ul ul li a{
+aside ul ul li a{
     font-size: 17px;
     color:#000916;
     padding-left:50px
 }
-nav ul li a .nav-icon{
+aside ul li a .nav-icon{
     position: absolute;
     top:25px;
     right: 25px;
@@ -68,20 +68,20 @@ nav ul li a .nav-icon{
     font-size: 22px;
     transition: transform 0.4s;
 }
-nav ul li a:hover .nav-icon{
+aside ul li a:hover .nav-icon{
     transform: translateY(-50%) rotate(90deg);
 }
-nav ul ul li a:hover{
+aside ul ul li a:hover{
     color:white;
 }
-nav ul li a .nav-menu-icon{
+aside ul li a .nav-menu-icon{
     color:#1D3557;
     font-size: 22px;
     position: absolute;
     left:10px;
     top:20px;
 }
-nav ul li .logout{
+aside ul li .logout{
     margin-top: 50px;
 }
 

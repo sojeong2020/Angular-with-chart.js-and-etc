@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavModule } from 'src/app/shared/navigation/nav/nav.module';
+import { NavModule } from 'src/app/shared/navigation/sidebar/nav.module';
 import { TopNavModule } from 'src/app/shared/navigation/top-nav/top-nav.module';
 import { MatIconModule } from '@angular/material/icon'
 

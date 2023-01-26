@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon'
 
 import { SessionModule } from './session/session.module';
 import { CustomerModule } from './customer/customer.module';
-import { NavModule } from '../shared/navigation/nav/nav.module';
+import { NavModule } from '../shared/navigation/sidebar/nav.module';
 import { TopNavModule } from '../shared/navigation/top-nav/top-nav.module';
 
 import { CalendarComponent } from './calendar/calendar.component';
