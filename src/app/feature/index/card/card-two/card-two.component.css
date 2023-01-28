@@ -1,0 +1,26 @@
+.card-all{
+  display: flex;
+
+}
+.example-card {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px; 
+  }
+  
+  .card-container{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    padding:20px;
+    border-radius: 10px;
+    background:  #F1FAEE;
+}
+
+.card-component-top{
+  line-height: 200%;
+  padding-bottom: 10px;
+}
+.card-component-bottom{
+  line-height: 150%;
+  padding-top:10px;
+}
