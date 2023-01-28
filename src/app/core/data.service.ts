@@ -20,5 +20,9 @@ export class DataService {
     return this.http.get<Production[]>(this.url +'/random')
     }
 
+  getBeerData(): Observable<Production[]>{
+      return this.http.get<Production[]>(this.url +'/?page=1&per_page=4')
+    }
+
  //Observables from RxJS library can emit multiple values.
 }

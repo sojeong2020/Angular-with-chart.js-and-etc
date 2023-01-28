@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -32,7 +34,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatListModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSortModule
   ],
   exports: [
     MatInputModule,
@@ -47,7 +50,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatListModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSortModule
   ],
 })
 export class AngularMaterialModule {}

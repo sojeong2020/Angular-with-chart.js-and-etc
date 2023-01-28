@@ -23,6 +23,10 @@ import { PiepunkChartComponent } from './chartPunk/piepunk-chart/piepunk-chart.c
 import { RandomComponent } from './chartPunk/random/random.component';
 import { TableComponent } from './index/table/table.component';
 import { CardComponent } from './index/card/card.component';
+import { TableOneComponent } from './index/table/table-one/table-one.component';
+import { TableTwoComponent } from './index/table/table-two/table-two.component';
+import { TableThreeComponent } from './index/table/table-three/table-three.component';
+import { TableFourComponent } from './index/table/table-four/table-four.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { CardComponent } from './index/card/card.component';
     PiepunkChartComponent,
     RandomComponent,
     TableComponent,
-    CardComponent
+    CardComponent,
+    TableOneComponent,
+    TableTwoComponent,
+    TableThreeComponent,
+    TableFourComponent,
   ],
   imports: [
     CommonModule,
@@ -64,7 +72,8 @@ import { CardComponent } from './index/card/card.component';
     PiepunkChartComponent,
     RandomComponent, 
     TableComponent,
-    CardComponent
+    CardComponent,
+    TableOneComponent
 
   ]
 })

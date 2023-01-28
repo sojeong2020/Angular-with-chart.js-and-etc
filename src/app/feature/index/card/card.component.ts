@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  collapsed: boolean = false;
+  collapsed: boolean = true;
 
   constructor() { }
 

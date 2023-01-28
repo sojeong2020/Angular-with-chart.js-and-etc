@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  collapsed: boolean = false;
+  collapsed: boolean = true;
 
   constructor() { }
 

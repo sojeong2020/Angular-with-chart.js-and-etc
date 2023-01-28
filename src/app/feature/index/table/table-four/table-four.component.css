@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+  }
+
+.table-title{
+    padding:10px;
+    text-align: left;
+}
+
+table th{
+  background:pink;
+}
+
+.example-container {
+    height: 400px;
+    overflow: auto;
+}
+

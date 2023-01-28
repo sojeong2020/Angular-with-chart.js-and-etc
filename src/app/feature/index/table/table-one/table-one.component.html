@@ -1,0 +1,45 @@
+<!-- <div class="table-title">
+    <p>table-one works!</p>
+</div> -->
+<section class="example-container">
+    <table mat-table
+    matSort 
+    matSortActive="ph"
+    matSortDirection="asc"
+    [dataSource]="dataSource" 
+    class="mat-elevation-z8"
+    class="users-table">
+
+    <caption class="table-title">table-one-fetchAPI, collapse</caption>
+
+        <ng-container matColumnDef="name">
+        <th mat-header-cell  *matHeaderCellDef class="users-table-cell">Name</th>
+        <td mat-cell *matCellDef="let element" class="users-table-cell">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="first_brewed">
+            <th mat-header-cell  *matHeaderCellDef class="users-table-cell">First_Brewed</th>
+            <td mat-cell *matCellDef="let element" class="users-table-cell">{{element.first_brewed}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ph">
+            <th mat-header-cell *matHeaderCellDef class="users-table-cell">PH</th>
+            <td mat-cell *matCellDef="let element" class="users-table-cell">{{element.ph}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="volume">
+            <th mat-header-cell *matHeaderCellDef class="users-table-cell">Volume</th>
+            <td mat-cell *matCellDef="let element" class="users-table-cell">{{element.volume.value}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tagline">
+            <th mat-header-cell *matHeaderCellDef class="users-table-cell">Tag_Line</th>
+            <td mat-cell *matCellDef="let element" class="users-table-cell">{{element.tagline}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    
+</section>
+

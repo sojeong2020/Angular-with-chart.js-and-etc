@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+  }
+
+ .example-container{
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;  
+    overflow: auto;
+
+}
+
+.users-table-cell{
+    border: 1px solid #dddddd; 
+    text-align: left;
+    padding:8px;
+} 
+
+
+@media (max-width:600px){
+    .example-container {
+        overflow-wrap: break-word;
+        height: 400px;
+        width: 300px;   
+        width: 100%;
+        overflow: auto;
+      } 
+      
+}
+
+
+

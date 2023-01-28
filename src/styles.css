@@ -101,7 +101,7 @@ body {
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 910px) {
     /* so when the widht is 640px or less the following rules apply */ 
     
       /* makes the toggle visible by setting its scale to 1 from 0..
@@ -137,7 +137,7 @@ body {
       /* this changes the side bar to position relative which means we can now adjust the left property */
       #sidenav {
         position: relative;
-        left: 0;
+        left: -100;
       }
     
       /* this sets the collapsed version of the side bar to left -100% which shoves it off the screen,

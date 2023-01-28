@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerHomeComponent implements OnInit {
 
-  collapsed: boolean = false;
+  collapsed: boolean = true;
 
   constructor() { }
 
