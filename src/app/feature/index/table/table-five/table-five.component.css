@@ -30,18 +30,18 @@ table th{
   text-align: left;
 }
 
-/* .users-table-cell{
+.users-table-cell{
    border: 1px solid #dddddd; 
    text-align: left;
    padding:8px; 
-}  */
+}  
 
 
  
 @media (max-width:600px){
   .example-container {
     height: 400px;
-    width: 450px;
+    width: 550px;
     max-width: 100%;
     overflow: auto; 
    

@@ -12,27 +12,27 @@
 
       <ng-container matColumnDef="name" sticky>
       <th mat-header-cell  *matHeaderCellDef class="users-table-cell">Name</th>
-      <td mat-cell *matCellDef="let element"><div class="table-cell">{{element.name}}</div></td>
+      <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.name}}</div></td>
       </ng-container>
 
       <ng-container matColumnDef="first_brewed">
           <th mat-header-cell  *matHeaderCellDef class="users-table-cell">First_Brewed</th>
-          <td mat-cell *matCellDef="let element"><div class="table-cell">{{element.first_brewed}}</div></td>
+          <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.first_brewed}}</div></td>
       </ng-container>
 
       <ng-container matColumnDef="ph">
           <th mat-header-cell *matHeaderCellDef class="users-table-cell">PH</th>
-          <td mat-cell *matCellDef="let element" ><div class="table-cell">{{element.ph}}</div></td>
+          <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.ph}}</div></td>
       </ng-container>
 
       <ng-container matColumnDef="volume">
           <th mat-header-cell *matHeaderCellDef class="users-table-cell">Volume</th>
-          <td mat-cell *matCellDef="let element" ><div class="table-cell">{{element.volume.value}}</div></td>
+          <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.volume.value}}</div></td>
       </ng-container>
 
       <ng-container matColumnDef="tagline" >
           <th mat-header-cell *matHeaderCellDef class="users-table-cell">Tag_Line</th>
-          <td mat-cell *matCellDef="let element" ><div class="table-cell">{{element.tagline}}</div></td>
+          <td mat-cell *matCellDef="let element" class="users-table-cell" ><div class="table-cell">{{element.tagline}}</div></td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
