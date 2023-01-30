@@ -1,18 +1,31 @@
 table {
     width: 100%;
   }
+.example-container {
+    height: 500px;
+    overflow: auto;
+}
 
 .table-title{
     padding:10px;
     text-align: left;
 }
 
+/* inside <td> added <div class="table-cell"> to target  */
+ 
+ td .table-cell{
+  width: 50px;
+  height: 65px;
+  color:red;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+} 
+
+/* The text-overflow property doesn't force an overflow to occur. To make text overflow its container, 
+you have to set other CSS properties: overflow and white-space. */
+
 table th{
   background:pink;
-}
-
-.example-container {
-    height: 400px;
-    overflow: auto;
 }
 

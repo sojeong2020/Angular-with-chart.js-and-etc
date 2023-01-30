@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import zoomPlugin from 'chartjs-plugin-zoom';
+import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-bar-chart',
@@ -47,14 +48,22 @@ export class BarChartComponent implements OnInit {
         indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
+            pan: {
+              // pan options and/or events
+            },
+            limits: {
+              // axis limits
+              y: {min: 0, max: 100},
+              y2: {min: -5, max: 5}
+            },
             zoom: {
-              wheel: {
+               // zoom options and/or events
+              drag: {
                 enabled: true,
+                backgroundColor: 'red',
+
               },
-              pinch: {
-                enabled: true
-              },
-              mode: 'xy',
+             
             }
           }
         }

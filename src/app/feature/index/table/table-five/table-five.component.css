@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+}
+
+.example-container{
+  height: 500px;
+
+  /* table-layout: fixed;
+  border-collapse: collapse;  */ 
+  overflow: auto;
+
+}
+
+td .table-cell{
+  width: 100px;
+  height: 65px;
+  
+  /* overflow: hidden;
+  white-space: normal; */
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+table th{
+  padding: 8px;
+  width: 25vw;
+  background:pink;
+  text-align: left;
+}
+
+/* .users-table-cell{
+   border: 1px solid #dddddd; 
+   text-align: left;
+   padding:8px; 
+}  */
+
+
+ 
+@media (max-width:600px){
+  .example-container {
+    height: 400px;
+    width: 450px;
+    max-width: 100%;
+    overflow: auto; 
+   
+  }
+  
+table td:first-child{
+   
+    background: rgb(202, 240, 209);
+  }
+  
+ 
+}

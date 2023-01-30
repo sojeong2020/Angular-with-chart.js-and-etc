@@ -29,6 +29,7 @@ import { TableThreeComponent } from './index/table/table-three/table-three.compo
 import { TableFourComponent } from './index/table/table-four/table-four.component';
 import { CardOneComponent } from './index/card/card-one/card-one.component';
 import { CardTwoComponent } from './index/card/card-two/card-two.component';
+import { TableFiveComponent } from './index/table/table-five/table-five.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { CardTwoComponent } from './index/card/card-two/card-two.component';
     TableFourComponent,
     CardOneComponent,
     CardTwoComponent,
+    TableFiveComponent,
   ],
   imports: [
     CommonModule,
