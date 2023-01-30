@@ -48,23 +48,27 @@ export class BarChartComponent implements OnInit {
         indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
-            pan: {
+            //pan: {
               // pan options and/or events
+            //},
+            pan:{
+              enabled: true,
+              mode:'x',
             },
             limits: {
               // axis limits
-              y: {min: 0, max: 100},
-              y2: {min: -5, max: 5}
+             
             },
             zoom: {
-               // zoom options and/or events
-              drag: {
+              wheel: {
                 enabled: true,
-                backgroundColor: 'red',
-
               },
-             
+              pinch: {
+                enabled: true
+              },
+              mode: 'x',
             }
+            
           }
         }
       }

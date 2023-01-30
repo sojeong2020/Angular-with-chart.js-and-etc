@@ -1,21 +1,21 @@
+
+.card-container{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  padding:20px;
+  border-radius: 10px;
+  background:  #F1FAEE;
+}
 .card-all{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:space-evenly;
 
 }
 .example-card {
     border-radius: 10px;
     margin: 20px; 
   }
-  
-  .card-container{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-    padding:20px;
-    border-radius: 10px;
-    background:  #F1FAEE;
-}
 
 .card-component-top{
   line-height: 200%;
@@ -29,6 +29,7 @@
 @media (max-width:640px){
   .card-all{
     flex-direction: column;
+    width: 100%;
 
   }
 }

@@ -60,6 +60,10 @@ export class MixedChartComponent implements OnInit {
         aspectRatio:2.5,
         plugins: {
           zoom: {
+            pan:{
+              enabled: true,
+              mode:'x',
+            },
             zoom: {
               wheel: {
                 enabled: true,
@@ -67,7 +71,7 @@ export class MixedChartComponent implements OnInit {
               pinch: {
                 enabled: true
               },
-              mode: 'xy',
+              mode: 'x',
             }
           }
         }

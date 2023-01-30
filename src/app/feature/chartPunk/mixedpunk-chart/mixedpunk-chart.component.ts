@@ -60,6 +60,10 @@ export class MixedpunkChartComponent implements OnInit {
         indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
+            pan:{
+              enabled: true,
+              mode:'x',
+            },
             zoom: {
               wheel: {
                 enabled: true,
@@ -67,7 +71,7 @@ export class MixedpunkChartComponent implements OnInit {
               pinch: {
                 enabled: true
               },
-              mode: 'xy',
+              mode: 'x',
             }
           }
         }

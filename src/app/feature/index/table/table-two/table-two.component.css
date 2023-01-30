@@ -21,6 +21,7 @@ td .table-cell{
     height: 65px;
     color:red;
     overflow: hidden;
+
     text-overflow: ellipsis;
 } 
 

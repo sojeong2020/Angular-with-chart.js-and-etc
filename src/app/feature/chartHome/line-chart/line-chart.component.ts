@@ -44,6 +44,10 @@ export class LineChartComponent implements OnInit {
         aspectRatio:2.5,
         plugins: {
           zoom: {
+            pan:{
+              enabled: true,
+              mode:'x',
+            },
             zoom: {
               wheel: {
                 enabled: true,
@@ -51,7 +55,7 @@ export class LineChartComponent implements OnInit {
               pinch: {
                 enabled: true
               },
-              mode: 'xy',
+              mode: 'x',
             }
           }
         }

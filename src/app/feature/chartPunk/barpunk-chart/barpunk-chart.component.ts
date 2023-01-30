@@ -47,6 +47,10 @@ constructor(private dataService: DataService) { }
         indexAxis: 'x', //indexAxis: 'y' it is horizontal bar chart
         plugins: {
           zoom: {
+            pan:{
+              enabled: true,
+              mode:'x',
+            },
             zoom: {
               wheel: {
                 enabled: true,
@@ -54,7 +58,7 @@ constructor(private dataService: DataService) { }
               pinch: {
                 enabled: true
               },
-              mode: 'xy',
+              mode: 'x',
             }
           }
         }
