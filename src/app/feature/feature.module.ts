@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../shared/navigation/angular-material.module';
-import { TableSixModule } from './index/table/table-six/table-six.module';
 
 
 import { SessionModule } from './session/session.module';
@@ -59,7 +58,6 @@ import { TableSevenComponent } from './index/table/table-seven/table-seven.compo
     CardTwoComponent,
     TableFiveComponent,
     TableSevenComponent,
-   // TableSixComponent,
   ],
   imports: [
     CommonModule,
@@ -69,7 +67,6 @@ import { TableSevenComponent } from './index/table/table-seven/table-seven.compo
     SessionModule,
     CustomerModule,
     RouterModule,
-    TableSixModule
   ],
   exports:[
     CalendarComponent,
