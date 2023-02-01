@@ -1,8 +1,13 @@
 table {
     width: 100%;
   }
+.table-title{
+    padding:10px;
+    text-align: left;
 
- .example-container{
+}
+
+.example-container{
     width:100%;
     table-layout: fixed;
     border-collapse: collapse;  
@@ -11,21 +16,39 @@ table {
 }
 
 .users-table-cell{
-    border: 1px solid #dddddd; 
-    text-align: left;
+/*     border: 1px solid #dddddd; 
+ */    text-align: left;
     padding:8px;
 } 
 
 
 @media (max-width:600px){
+
     .example-container {
-        overflow-wrap: break-word;
         height: 400px;
-        width: 300px;   
-        width: 100%;
-        overflow: auto;
-      } 
-      
+        width: 550px;
+        max-width: 100%;
+        overflow: auto; 
+       
+    }
+
+    td .table-cell{
+        width: 100px;
+        height: 30px;
+        
+        /* overflow: hidden;
+        white-space: normal; */
+        
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;  
+    }
+
+   table td:first-child{
+       
+        background: rgb(202, 240, 209);
+      }
+   
 }
 
 

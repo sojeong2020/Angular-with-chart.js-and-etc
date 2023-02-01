@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../shared/navigation/angular-material.module';
+import { TableSixModule } from './index/table/table-six/table-six.module';
+
 
 import { SessionModule } from './session/session.module';
 import { CustomerModule } from './customer/customer.module';
@@ -30,6 +32,8 @@ import { TableFourComponent } from './index/table/table-four/table-four.componen
 import { CardOneComponent } from './index/card/card-one/card-one.component';
 import { CardTwoComponent } from './index/card/card-two/card-two.component';
 import { TableFiveComponent } from './index/table/table-five/table-five.component';
+import { TableSevenComponent } from './index/table/table-seven/table-seven.component';
+//import { TableSixComponent } from './index/table/table-six/table-six.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,8 @@ import { TableFiveComponent } from './index/table/table-five/table-five.componen
     CardOneComponent,
     CardTwoComponent,
     TableFiveComponent,
+    TableSevenComponent,
+   // TableSixComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +68,8 @@ import { TableFiveComponent } from './index/table/table-five/table-five.componen
     AngularMaterialModule,
     SessionModule,
     CustomerModule,
-    RouterModule
+    RouterModule,
+    TableSixModule
   ],
   exports:[
     CalendarComponent,

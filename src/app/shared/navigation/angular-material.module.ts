@@ -11,12 +11,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
-import { MatSortModule } from '@angular/material/sort';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [],
@@ -35,7 +37,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSelectModule,
     MatCheckboxModule,
     MatGridListModule,
-    MatSortModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatInputModule,
@@ -51,7 +54,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSelectModule,
     MatCheckboxModule,
     MatGridListModule,
-    MatSortModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
 })
 export class AngularMaterialModule {}
