@@ -15,6 +15,9 @@ table {
     overflow: auto;
 
 }
+tr:nth-child(even) {
+  background-color: #F1FAEE;
+}
 td .table-cell{
   width: 100px;
   height: 30px;
@@ -38,9 +41,13 @@ td .table-cell{
         max-width: 100%;
         overflow: auto; 
       }
+      table td:first-child{
+        background: rgb(202, 240, 209);
+      }
       mat-paginator{
         display:inline;
       }
+
 
     
    

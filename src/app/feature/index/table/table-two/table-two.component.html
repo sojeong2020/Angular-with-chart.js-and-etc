@@ -1,54 +1,30 @@
 
 <div>
-    <p class="table-title">table-two Basic sticky header & text-overflow ellipsis</p>
+    <p class="table-title">(2) table with multiple filtering, retrieving data through HTTP</p>
 </div>
 
 <section class="example-container">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-        
-<!--         <caption>table-two works!</caption>
- -->        
-        <!-- The <caption> tag defines a table caption.
-        The <caption> tag must be inserted immediately after the <table> tag. -->
-
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element" class="table-cell"> {{element.position}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element" ><div class="table-cell">{{element.name}}</div></td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="weight">
-          <th mat-header-cell *matHeaderCellDef> Weight </th>
-          <td mat-cell *matCellDef="let element" ><div class="table-cell">{{element.weight}}</div></td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef> Symbol </th>
-          <td mat-cell *matCellDef="let element" class="table-cell"><div class="table-cell"> {{element.symbol}} </div></td>
-        </ng-container>
-
-        <!-- color Column -->
-        <ng-container matColumnDef="color">
-            <th mat-header-cell *matHeaderCellDef> Color </th>
-            <td mat-cell *matCellDef="let element" class="table-cell"><div class="table-cell"> {{element.color}} </div></td>
-        </ng-container>
-
-       
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-      
-      
+  <mat-form-field appearance="fill" *ngFor="let productionFilter of productionFilters">
+    <mat-label>{{ productionFilter.name }}</mat-label>
+    <mat-select
+      [(value)]="productionFilter.defaultValue"
+      (selectionChange)="applyProductionFilter($event, productionFilter)"
+    >
+      <mat-option *ngFor="let op of productionFilter.options" [value]="op">
+        {{ op }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  
+  <table mat-table [dataSource]="dataSourceFilters" class="mat-elevation-z8">
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let pro">{{ pro[column] }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+  </table>
 </section>
 

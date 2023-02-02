@@ -17,6 +17,7 @@ export class TableSevenComponent implements OnInit{
   dataSource!: MatTableDataSource<Production>
 
   posts!: Production[];
+  
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

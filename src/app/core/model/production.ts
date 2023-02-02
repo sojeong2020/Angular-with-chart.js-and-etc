@@ -10,7 +10,19 @@ export interface Production {
     ingredients:any
 }
 
- interface Volume {
+interface Volume {
     value:number,
     unit: string
 } 
+
+export interface ProductionFilter {
+    name:string;
+    options:string[];
+    defaultValue:string;
+}
+
+export interface filterOption{
+    name:string;
+    value:string;
+    isdefault:boolean;
+}

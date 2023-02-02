@@ -14,6 +14,9 @@ table {
     overflow: auto;
 
 }
+tr:nth-child(even) {
+    background-color: #F1FAEE;
+}
 
 .users-table-cell{
 /*     border: 1px solid #dddddd; 
