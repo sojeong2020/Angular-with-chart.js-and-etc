@@ -32,7 +32,6 @@ import { CardOneComponent } from './index/card/card-one/card-one.component';
 import { CardTwoComponent } from './index/card/card-two/card-two.component';
 import { TableFiveComponent } from './index/table/table-five/table-five.component';
 import { TableSevenComponent } from './index/table/table-seven/table-seven.component';
-//import { TableSixComponent } from './index/table/table-six/table-six.component';
 
 @NgModule({
   declarations: [
@@ -83,8 +82,8 @@ import { TableSevenComponent } from './index/table/table-seven/table-seven.compo
     RandomComponent, 
     TableComponent,
     CardComponent,
-    TableOneComponent
-
+    TableOneComponent,
+    TableSevenComponent
   ]
 })
 export class FeatureModule { }

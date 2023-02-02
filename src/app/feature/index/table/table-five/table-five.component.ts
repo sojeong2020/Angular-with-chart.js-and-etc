@@ -16,7 +16,7 @@ export class TableFiveComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getBeerData().subscribe(data =>{
+    this.dataService.getBeers().subscribe(data =>{
       console.log(data,"data for table!!!")
       this.dataSource = data;
   })

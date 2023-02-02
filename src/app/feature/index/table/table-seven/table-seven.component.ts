@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild ,OnInit} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,29 +10,32 @@ import { Production } from 'src/app/core/model/production';
   templateUrl: './table-seven.component.html',
   styleUrls: ['./table-seven.component.css']
 })
-export class TableSevenComponent  {
+export class TableSevenComponent implements OnInit{
 
   displayedColumns: string[]= ['first_brewed','name','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
 
   posts: any;
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dataService: DataService) {
-    this.dataService.getBeers().subscribe((data)=>{
-      console.log(data,"data from table-seven !!")
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.dataService.getBeers().subscribe(data =>{
+      console.log(data,"data from table-seven in ngOnInit !!!!!")
       this.posts = data;
 
-       // Assign the data to the data source for the table to render
-       this.dataSource = new MatTableDataSource(this.posts);
+      // Assign the data to the data source for the table to render
+      this.dataSource = new MatTableDataSource(this.posts);
 
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
 
-    })
-   }
+    })  
+  }
 
    applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
