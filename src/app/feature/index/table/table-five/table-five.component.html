@@ -39,6 +39,9 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
+
+  <mat-paginator [pageSizeOptions]="[ 10, 20, 30]" aria-label="Select page of users"></mat-paginator>
+
   
 </section>
 

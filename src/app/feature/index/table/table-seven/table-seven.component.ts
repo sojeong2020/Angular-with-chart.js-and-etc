@@ -1,6 +1,6 @@
 import { Component, ViewChild ,OnInit} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, SortDirection } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { DataService } from 'src/app/core/data.service';
 import { Production } from 'src/app/core/model/production';
@@ -12,11 +12,11 @@ import { Production } from 'src/app/core/model/production';
 })
 export class TableSevenComponent implements OnInit{
 
-  displayedColumns: string[]= ['first_brewed','name','ph','tagline'];
+  displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
 
-  posts: any;
+  posts!: Production[];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

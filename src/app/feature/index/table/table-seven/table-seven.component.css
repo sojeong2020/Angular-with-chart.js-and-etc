@@ -2,14 +2,52 @@ table {
     width: 100%;
   }
 
-  .table-title{
+.table-title{
     padding:10px;
     text-align: left;
   
   }
+
+.example-table-container{
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;  
+    overflow: auto;
+
+}
+td .table-cell{
+  width: 100px;
+  height: 30px;
+  
+  /* overflow: hidden;
+  white-space: normal; */
+  
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;  
+}
+
+
+
+
+@media (max-width:600px){
+
+    .example-table-container {
+        height: 400px;
+        width: 370px;
+        max-width: 100%;
+        overflow: auto; 
+      }
+      mat-paginator{
+        display:inline;
+      }
+
+    
+   
+}
   
   
-/*   .mat-form-field {
+  /* .mat-form-field {
     font-size: 14px;
     width: 20%;
   }
@@ -24,4 +62,4 @@ table {
   }
   .th-right{
     text-align: right;
-  } */
+  }  */

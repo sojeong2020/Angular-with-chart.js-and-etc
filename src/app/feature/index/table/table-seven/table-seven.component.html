@@ -2,42 +2,44 @@
     <p>(7)Table retrieving data through HTTP,filter,paginator</p>
 </div>
 
-<section>
+<section class="example-container">
+
     <mat-form-field appearance="standard">
         <mat-label>Filter Table</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
-      </mat-form-field>
+    </mat-form-field>
       
-      <div class="mat-elevation-z8">
+      <div class="example-table-container mat-elevation-z8">
         <table 
         mat-table 
         matSort 
-        matSortActive="name" 
+        matSortActive="ph" 
         matSortDisableClear 
         matSortDirection="desc"
         [dataSource]="dataSource" >
 
-        <ng-container matColumnDef="first_brewed">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> First_Brewed </th>
-            <td mat-cell *matCellDef="let row"> {{row.first_brewed}} </td>
+        <ng-container matColumnDef="first_brewed"  >
+            <th mat-header-cell *matHeaderCellDef> First_Brewed </th>
+            <td mat-cell *matCellDef="let row"> <div class="table-cell">{{row.first_brewed}}</div> </td>
         </ng-container>
       
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+          <ng-container matColumnDef="name" sticky>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef > Name </th>
+            <td mat-cell *matCellDef="let row"><div class="table-cell">{{row.name}}</div></td>
           </ng-container>
       
          <ng-container matColumnDef="ph">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> PH </th>
-            <td mat-cell *matCellDef="let row"> {{row.ph}} </td>
+            <th mat-header-cell mat-sort-header disableClear *matHeaderCellDef >
+            PH </th>
+            <td mat-cell *matCellDef="let row"> <div class="table-cell">{{row.ph}}</div> </td>
           </ng-container>
       
           <ng-container matColumnDef="tagline">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> tagline </th>
-            <td mat-cell *matCellDef="let row"> {{row.tagline}} </td>
+            <th mat-header-cell *matHeaderCellDef > tagline </th>
+            <td mat-cell *matCellDef="let row"><div class="table-cell">{{row.tagline}}</div> </td>
           </ng-container>
       
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       
           <!-- Row shown when there is no matching data. -->
@@ -45,7 +47,7 @@
             <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
           </tr>
         </table>
-      
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
       </div>
+
 </section>

@@ -3,42 +3,43 @@
 </div> 
 
 <section class="example-container">
-    <table mat-table
+<div class="example-table-container">
+    <table 
+    mat-table
     matSort 
-    matSortActive="ph"
     matSortDirection="asc"
     [dataSource]="dataSource" 
     class="mat-elevation-z8"
     class="users-table">
 
         <ng-container matColumnDef="name" sticky >
-        <th mat-header-cell  *matHeaderCellDef class="users-table-cell">Name</th>
+        <th mat-header-cell  mat-sort-header *matHeaderCellDef class="users-table-cell">Name</th>
         <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.name}}</div></td>
         </ng-container>
 
         <ng-container matColumnDef="first_brewed">
-            <th mat-header-cell  *matHeaderCellDef class="users-table-cell">First_Brewed</th>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef class="users-table-cell">First_Brewed</th>
             <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.first_brewed}}</div></td>
         </ng-container>
 
         <ng-container matColumnDef="ph">
-            <th mat-header-cell *matHeaderCellDef class="users-table-cell">PH</th>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef class="users-table-cell">PH</th>
             <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.ph}}</div></td>
         </ng-container>
 
         <ng-container matColumnDef="volume">
-            <th mat-header-cell *matHeaderCellDef class="users-table-cell">Volume</th>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef class="users-table-cell">Volume</th>
             <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.volume.value}}</div></td>
         </ng-container>
 
         <ng-container matColumnDef="tagline">
-            <th mat-header-cell *matHeaderCellDef class="users-table-cell">Tag_Line</th>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef class="users-table-cell">Tag_Line</th>
             <td mat-cell *matCellDef="let element" class="users-table-cell"><div class="table-cell">{{element.tagline}}</div></td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-    
+</div>
 </section>
 
