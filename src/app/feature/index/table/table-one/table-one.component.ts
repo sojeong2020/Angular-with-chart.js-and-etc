@@ -23,6 +23,7 @@ export class TableOneComponent implements OnInit {
 
    ngOnInit(): void {
     this.dataService.getBeerData().subscribe(data =>{
+      console.log(data,"data from table-one")
       this.dataSource = data;
     })
   }  

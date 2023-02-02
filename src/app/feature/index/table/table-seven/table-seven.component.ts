@@ -25,7 +25,7 @@ export class TableSevenComponent implements OnInit{
 
   ngOnInit(): void {
     this.dataService.getBeers().subscribe(data =>{
-      console.log(data,"data from table-seven in ngOnInit !!!!!")
+      console.log(data,"data from table-seven!")
       this.posts = data;
 
       // Assign the data to the data source for the table to render
