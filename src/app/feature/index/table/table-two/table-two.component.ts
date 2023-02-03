@@ -13,21 +13,19 @@ export class TableTwoComponent implements OnInit {
 
   displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
-  name: string[]=['Buzz','Storm','Movember'];
-  ph: string[]=['3.2','4.4','5.2',];
-  //tag: string[]=['Dry','Milk','You'];
+  phs: number[]=[3.2, 4.4, 5.2];
+  names: string[]=['Buzz','Storm','Movember'];
+  //tags: string[]=['Dry','Milk','You'];
 
   productionFilters: ProductionFilter[]=[];
 
   defaultValue = "All";
 
+  
+
   filterDictionary= new Map<string,string>();
 
-
-  dataSource!: MatTableDataSource<Production>
-  
   dataSourceFilters! : MatTableDataSource<Production>;
-  
   posts!: Production[];
 
 constructor(private dataService: DataService) {}
@@ -37,26 +35,27 @@ constructor(private dataService: DataService) {}
       console.log(data,"data from table-seven!")
       this.posts = data;
 
-      // Assign the data to the data source for the table to render
+    console.log(this.defaultValue,"this.defaultvalue!!") //'All'
 
-      //this.dataSource = new MatTableDataSource(this.posts);
-      this.dataSourceFilters = new MatTableDataSource(this.posts);
 
-      
-    this.productionFilters.push({name:'name',options:this.name, defaultValue:this.defaultValue});
-    this.productionFilters.push({name:'ph',options:this.ph, defaultValue:this.defaultValue});
-    //this.productionFilters.push({name:'tag',options:this.tag, defaultValue:this.defaultValue});
+    this.dataSourceFilters = new MatTableDataSource(this.posts);
 
-      this.dataSourceFilters.filterPredicate = function (record,filter) {
-        debugger;
-        var map = new Map(JSON.parse(filter));
-        let isMatch = false;
-        for(let [key,value] of map){
-          isMatch = (value=="All") || (record[key as keyof Production] == value); 
-          if(!isMatch) return false;
-        }
-        return isMatch;
+    this.productionFilters.push({name:'ph', options:this.phs, defaultValue: this.defaultValue});
+    this.productionFilters.push({name:'name', options:this.names, defaultValue:this.defaultValue});
+    //this.productionFilters.push({name:'tag',options:this.tags, defaultValue:this.defaultValue});
+
+    this.dataSourceFilters.filterPredicate = function (record,filter) {
+
+      var map = new Map(JSON.parse(filter));
+      let isMatch = false;
+
+      for(let [key,value] of map){
+        isMatch = (value=="All") || (record[key as keyof Production] == value); 
+        if(!isMatch) return false;
       }
+
+      return isMatch;
+    }
 
      
 
@@ -65,23 +64,18 @@ constructor(private dataService: DataService) {}
 
 applyProductionFilter(ob : MatSelectChange, productionFilter : ProductionFilter) {
 
+  console.log(productionFilter,"production filter!")
+
     this.filterDictionary.set(productionFilter.name, ob.value);
 
-
-    var jsonString = JSON.stringify(Array.from(this.filterDictionary.entries()));
+    let jsonString = JSON.stringify(Array.from(this.filterDictionary.entries()));
     
     this.dataSourceFilters.filter = jsonString;
+
     console.log(jsonString,"jsonString!!!")
     //console.log(this.filterValues);
   }
 
-applyFilter(event: Event) {
-  const filterValue = (event.target as HTMLInputElement).value;
 
-  console.log(filterValue,"filterValue!!!!");
-
-  this.dataSource.filter = filterValue.trim().toLowerCase();
-
-} 
 
 }

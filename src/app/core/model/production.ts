@@ -17,8 +17,8 @@ interface Volume {
 
 export interface ProductionFilter {
     name:string;
-    options:string[];
-    defaultValue:string;
+    options:any[];
+    defaultValue:any;
 }
 
 export interface filterOption{

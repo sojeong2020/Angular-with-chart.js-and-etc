@@ -14,7 +14,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export class TableOneComponent implements OnInit {
 
-  displayedColumns: string[]= ['first_brewed','name','ph','tagline'];
+  displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
 

@@ -4,55 +4,48 @@ table {
 .table-title{
     padding:10px;
     text-align: left;
+  
+  }
+  .example-container{
+    height: 500px;
+    overflow:auto;
 
 }
-
-.example-container{
-    width:100%;
-    table-layout: fixed;
-    border-collapse: collapse;  
-    overflow: auto;
-
-}
-tr:nth-child(even) {
-    background-color: #F1FAEE;
-}
-
-.users-table-cell{
-/*     border: 1px solid #dddddd; 
- */    text-align: left;
-    padding:8px;
-} 
-
-
-@media (max-width:600px){
-
-    .example-container {
-        height: 400px;
-        width: 550px;
-        max-width: 100%;
-        overflow: auto; 
-       
-    }
-
-    td .table-cell{
-        width: 100px;
-        height: 30px;
-        
-        /* overflow: hidden;
-        white-space: normal; */
-        
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;  
-    }
-
-   table td:first-child{
-       
-        background: rgb(202, 240, 209);
-      }
+  
+  td .table-cell{
+    width: 100px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+  }
+  
+  table th{
+    padding: 8px;
+    /* width: 25vw; */ 
+    background:#A8DADC;
+    text-align: left;
+  }
+  
+  .users-table-cell{
+     padding:8px; 
+  }  
+  
+  
    
-}
+  @media (max-width:600px){
+    .example-container {
+      height: 350px;
+      width: 460px;
+      max-width: 100%;
+      overflow: auto; 
+     
+    }
 
-
-
+    
+    table td:first-child{
+        box-shadow: 0 20px 16px -2px black;
+    }  
+   
+  }
+  
