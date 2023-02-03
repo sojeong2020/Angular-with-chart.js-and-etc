@@ -7,7 +7,9 @@ export interface Production {
     food_pairing:string[],
     volume: Volume,
     method: any,
-    ingredients:any
+    ingredients:any,
+    first_brewed:string,
+    tagline:string
 }
 
 interface Volume {

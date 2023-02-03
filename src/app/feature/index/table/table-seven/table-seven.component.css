@@ -1,13 +1,10 @@
+.table-title{
+  padding:10px;
+  text-align: left;
+}
 table {
     width: 100%;
   }
-
-.table-title{
-    padding:10px;
-    text-align: left;
-  
-  }
-
 .example-table-container{
     width:100%;
     table-layout: fixed;

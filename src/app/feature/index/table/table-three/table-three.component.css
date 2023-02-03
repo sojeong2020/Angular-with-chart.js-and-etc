@@ -1,53 +1,65 @@
-.example-container {
+.table-title{
+  padding:10px;
+  text-align: left;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;  
+
+}
+table th, table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  background-color: white;
+}
+
+table thead th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #A8DADC;
+  position: sticky;
+  top:0;
+  color:blue;
+  z-index: 1;
+}
+
+
+table tbody td .table-cell{
+  width: 100px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+
+
+/* stripe doesn't work 
+ */
+table tbody .table-row:hover {
+  background-color: rgb(212, 62, 62);
+}
+
+
+@media (max-width:670px){
+  .example-table-container{
     height: 400px;
     width: 550px;
-    max-width: 100%;
-    overflow: auto;
+    overflow: auto; 
+   
   }
 
-table {
-    width: 800px;
-}
-.table-title{
-    padding:10px;
-    text-align: left;
+  table tbody td:first-child {
+      position: sticky;
+      left: 0;
+      background-color: #ccdca8;
 
-}
+  }
 
-
-/* sticky header & columne */ 
+  
+   
  
-  table th{
-    padding: 3px;
-    position: sticky;
-    top: 0;
-    width: 25vw;
-    background:rgb(248, 209, 231);
-  }
-  
-  table td:first-child{
-    position: sticky;
-    left: 0;
-    background: rgb(202, 240, 209);
-  }
+}
 
 
-
-  td.mat-column-star {
-    width: 20px;
-    padding-right: 8px;
-  }
-  
-  th.mat-column-position, td.mat-column-position {
-    padding-left: 8px;
-  }
-  
-  .mat-mdc-table-sticky-border-elem-right {
-    border-left: 1px solid #e0e0e0;
-  }
-  
-  .mat-mdc-table-sticky-border-elem-left {
-    border-right: 1px solid #e0e0e0;
-  }
-
-
+ 

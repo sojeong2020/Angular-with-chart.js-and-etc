@@ -17,6 +17,8 @@ export class TableOneComponent implements OnInit {
   displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
+  
+  clickedRows = new Set<Production>();
 
   posts!: Production[];
 

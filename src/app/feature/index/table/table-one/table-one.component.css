@@ -6,11 +6,7 @@ table {
     text-align: left;
   
   }
-  .example-container{
-    height: 500px;
-    overflow:auto;
-
-}
+ 
   
   td .table-cell{
     width: 100px;
@@ -23,8 +19,8 @@ table {
   table th{
     padding: 8px;
     /* width: 25vw; */ 
-    background:#A8DADC;
-    text-align: left;
+/*     background:#A8DADC;
+ */    text-align: left;
   }
   
   .users-table-cell{
@@ -34,18 +30,18 @@ table {
   
    
   @media (max-width:600px){
-    .example-container {
-      height: 350px;
-      width: 460px;
-      max-width: 100%;
+    .example-table-container {
+      height: 450px;
+      width: 450px;
       overflow: auto; 
      
     }
 
-    
     table td:first-child{
-        box-shadow: 0 20px 16px -2px black;
-    }  
+   
+      background: rgb(202, 240, 209);
+    }
+    
    
   }
   
