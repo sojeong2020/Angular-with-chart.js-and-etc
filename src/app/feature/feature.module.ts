@@ -33,6 +33,9 @@ import { CardTwoComponent } from './index/card/card-two/card-two.component';
 import { TableFiveComponent } from './index/table/table-five/table-five.component';
 import { TableSevenComponent } from './index/table/table-seven/table-seven.component';
 
+import { PunkPipe } from '../shared/pipes/punk.pipe';
+
+
 @NgModule({
   declarations: [
     CalendarComponent,
@@ -57,6 +60,7 @@ import { TableSevenComponent } from './index/table/table-seven/table-seven.compo
     CardTwoComponent,
     TableFiveComponent,
     TableSevenComponent,
+    PunkPipe
   ],
   imports: [
     CommonModule,
@@ -83,7 +87,8 @@ import { TableSevenComponent } from './index/table/table-seven/table-seven.compo
     TableComponent,
     CardComponent,
     TableOneComponent,
-    TableSevenComponent
+    TableSevenComponent,
+    PunkPipe
   ]
 })
 export class FeatureModule { }

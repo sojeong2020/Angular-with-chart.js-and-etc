@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Production } from 'src/app/core/model/production';
 import { DataService } from 'src/app/core/data.service';
-import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-table-three',
@@ -10,7 +9,11 @@ import { Data } from '@angular/router';
 })
 export class TableThreeComponent implements OnInit {
 
-  productions!: Production[];
+  filterName!: string;
+  filterTip!: string;
+  filterTagline!: string;
+
+ productions: Production[]=[]
 
   constructor(private dataService: DataService) { }
 

@@ -9,10 +9,11 @@ export interface Production {
     method: any,
     ingredients:any,
     first_brewed:string,
-    tagline:string
+    tagline:string,
+    brewers_tips: string;
 }
 
-interface Volume {
+ interface Volume {
     value:number,
     unit: string
 } 
@@ -27,4 +28,4 @@ export interface filterOption{
     name:string;
     value:string;
     isdefault:boolean;
-}
+} 
