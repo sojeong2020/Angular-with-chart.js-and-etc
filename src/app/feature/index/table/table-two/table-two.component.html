@@ -7,7 +7,6 @@
   <mat-form-field appearance="fill" *ngFor="let productionFilter of productionFilters">
     <mat-label>{{ productionFilter.name }}</mat-label>
     <mat-select
-      placeholder="All"
       [(value)]="productionFilter.defaultValue"
       (selectionChange)="applyProductionFilter($event, productionFilter)"
     >

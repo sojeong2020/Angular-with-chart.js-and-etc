@@ -15,7 +15,6 @@ export class TableSevenComponent implements OnInit{
   displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
-
   posts!: Production[];
   
 
