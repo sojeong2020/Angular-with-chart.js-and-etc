@@ -1,0 +1,77 @@
+
+.table-title{
+    padding:10px;
+    text-align: left;
+  }
+  #production-table {
+    width: 100%;
+    border-collapse: collapse;  
+  
+  }
+  #production-table th, #production-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    background-color: white;
+  }
+  
+  #production-table thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #A8DADC;
+    position: sticky;
+    top:0;
+    color:blue;
+    z-index: 1;
+  }
+  
+  
+  #production-table tbody td .table-cell{
+    width: 100px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+  }
+  
+  
+  /* stripe doesn't work 
+   */
+  #production-table tbody .table-row:hover {
+    background-color: rgb(212, 62, 62);
+  }
+  
+  
+  @media (max-width:670px){
+    .example-table-container{
+      height: 400px;
+      width: 550px;
+      overflow: auto; 
+     
+    }
+  
+    #production-table tbody td:first-child {
+        position: sticky;
+        left: 0;
+        background-color: #ccdca8;
+  
+    }
+  
+    /* thead>th:first-child cell is the very highest,
+    as it needs to be above the body cells and it’s sibling headers again 
+    for horizontal scrolling. */
+    
+    #production-table thead th:first-child{
+      position:sticky;
+      left: 0;
+      background-color: #3b5205;
+      z-index: 2;
+   }
+  
+    
+     
+   
+  }
+  
+  
+   

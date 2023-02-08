@@ -3,10 +3,11 @@ import { DataService } from 'src/app/core/data.service';
 import { Production } from 'src/app/core/model/production';
 
 @Pipe({
-  name: 'punkFilter',
+  name: 'searchPunkFilter',
   pure: false  // An impure pipe executes during every component change detection cycle called on keystroke or mouse-move
 })
-export class PunkPipe implements PipeTransform {
+export class SearchPunkPipe implements PipeTransform {
+
 
   productions :Production[]=[]
 
@@ -35,9 +36,7 @@ transform(productions: Production[], filterName:String, filterTip:String, filter
         if (filterTagline && item.tagline.toLowerCase().indexOf(filterTagline.toLowerCase()) === -1){
             return false;
         }
-       /*  if (filterPh && item.ph.toString().toLowerCase().indexOf(filterPh.toString().toLowerCase()) === -1){
-          return false;
-      } */
+     
         return true;
    })
 }
@@ -45,7 +44,7 @@ else{
     return productions;
 }
 }
- 
-  
 
+
+ 
 }

@@ -20,6 +20,12 @@
   class="form-control" 
   [(ngModel)]="filterTagline"
   placeholder="All">
+  <br/>
+ <!--  <label>Filter By PH: </label>
+  <input type="search" 
+  class="form-control" 
+  [(ngModel)]="filterPh"
+  placeholder="All"> -->
 
 </div>
 
@@ -30,6 +36,7 @@
         <tr>
           <th>Name</th>
           <th>id</th>
+          <th>PH</th>
           <th>Brewers_Tips</th>
           <th>First_Brewed</th>
           <th>Tag Line</th>
@@ -40,6 +47,7 @@
         <tr *ngFor="let production of productions | punkFilter: filterName: filterTip: filterTagline" class="table-row">
           <td ><div class="table-cell">{{production.name}}</div></td>
           <td ><div class="table-cell">{{production.id}}</div></td>
+          <td ><div class="table-cell">{{production.ph}}</div></td>
           <td ><div class="table-cell">{{production.brewers_tips}}</div></td>
           <td ><div class="table-cell">{{production.first_brewed}}</div></td>
           <td ><div class="table-cell">{{production.tagline}}</div></td>

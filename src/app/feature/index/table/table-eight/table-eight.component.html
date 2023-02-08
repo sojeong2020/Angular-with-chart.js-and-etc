@@ -1,0 +1,34 @@
+<div>
+    <p class="table-title">(8)Reuse Pipe for multiple filter function & pass form data from parent component. search results display after submit button!</p>
+</div>
+
+<div>
+   <app-table-search-form (searchValues)= dowork($event)></app-table-search-form>
+</div>
+
+<section class="example-container">
+  <div class="example-table-container mat-elevation-z8">
+  <table id="production-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>id</th>
+          <th>Brewers_Tips</th>
+          <th>First_Brewed</th>
+          <th>Tag Line</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let production of productions | punkFilter: filterName: filterTip: filterTagline"  class="table-row">
+
+          <td ><div class="table-cell">{{production.name}}</div></td>
+          <td ><div class="table-cell">{{production.id}}</div></td>
+          <td ><div class="table-cell">{{production.brewers_tips}}</div></td>
+          <td ><div class="table-cell">{{production.first_brewed}}</div></td>
+          <td ><div class="table-cell">{{production.tagline}}</div></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>

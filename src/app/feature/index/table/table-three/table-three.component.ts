@@ -12,6 +12,7 @@ export class TableThreeComponent implements OnInit {
   filterName!: string;
   filterTip!: string;
   filterTagline!: string;
+  filterPh!:number;
 
  productions: Production[]=[]
 

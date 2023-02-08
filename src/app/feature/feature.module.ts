@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../shared/navigation/angular-material.module';
-
+import { TableSixModule } from './index/table/table-six/tablesix.module';
 
 import { SessionModule } from './session/session.module';
 import { CustomerModule } from './customer/customer.module';
@@ -32,9 +32,11 @@ import { CardOneComponent } from './index/card/card-one/card-one.component';
 import { CardTwoComponent } from './index/card/card-two/card-two.component';
 import { TableFiveComponent } from './index/table/table-five/table-five.component';
 import { TableSevenComponent } from './index/table/table-seven/table-seven.component';
+import { TableEightComponent } from './index/table/table-eight/table-eight.component';
 
 import { PunkPipe } from '../shared/pipes/punk.pipe';
-
+import { SearchPunkPipe } from '../shared/pipes/searchPunk.pipe';
+import { TableSearchFormComponent } from './forms/table-search-form/table-search-form.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,10 @@ import { PunkPipe } from '../shared/pipes/punk.pipe';
     CardTwoComponent,
     TableFiveComponent,
     TableSevenComponent,
-    PunkPipe
+    PunkPipe,
+    SearchPunkPipe,
+    TableEightComponent,
+    TableSearchFormComponent
   ],
   imports: [
     CommonModule,
@@ -70,6 +75,7 @@ import { PunkPipe } from '../shared/pipes/punk.pipe';
     SessionModule,
     CustomerModule,
     RouterModule,
+    TableSixModule
   ],
   exports:[
     CalendarComponent,
@@ -88,7 +94,9 @@ import { PunkPipe } from '../shared/pipes/punk.pipe';
     CardComponent,
     TableOneComponent,
     TableSevenComponent,
-    PunkPipe
+    PunkPipe,
+    SearchPunkPipe,
+    TableSearchFormComponent
   ]
 })
 export class FeatureModule { }

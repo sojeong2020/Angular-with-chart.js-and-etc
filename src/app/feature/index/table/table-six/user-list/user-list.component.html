@@ -1,0 +1,21 @@
+<table id="production-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Level</th>
+        <th>Job Title</th>
+        <th>Age</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users " class="table-row">
+        <td ><div class="table-cell">{{user.firstName}}</div></td>
+        <td ><div class="table-cell">{{user.lastName}}</div></td>
+        <td ><div class="table-cell">{{user.level}}</div></td>
+        <td ><div class="table-cell">{{user.jobTitle}}</div></td>
+        <td ><div class="table-cell">{{user.age}}</div></td>
+      </tr>
+    </tbody>
+  </table>
