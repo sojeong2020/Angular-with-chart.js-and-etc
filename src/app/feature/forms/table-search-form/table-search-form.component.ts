@@ -27,8 +27,8 @@ constructor() { }
     console.warn('Your search term has been submitted this.searchForm.value', this.searchForm.value);
   
     this.searchValues.emit(this.searchForm)
-    
-    this.searchForm.reset();
+
+    this.searchForm.reset();                                    
   } 
 
  

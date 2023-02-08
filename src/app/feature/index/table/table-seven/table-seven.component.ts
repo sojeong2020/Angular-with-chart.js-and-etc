@@ -12,7 +12,7 @@ import { Production } from 'src/app/core/model/production';
 })
 export class TableSevenComponent implements OnInit{
 
-  displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
+ displayedColumns: string[]= ['name','first_brewed','ph','tagline'];
 
   dataSource!: MatTableDataSource<Production>
   posts!: Production[];
@@ -45,6 +45,8 @@ export class TableSevenComponent implements OnInit{
       this.dataSource.paginator.firstPage();
     }
   }
+
+  
 
 }
 

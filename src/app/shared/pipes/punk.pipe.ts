@@ -12,14 +12,12 @@ export class PunkPipe implements PipeTransform {
 
   constructor( private dataService: DataService){}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.dataService.getBeers().subscribe(data =>{
       console.log(data,"data from pipe function")
         //you could also cache your result
       this.productions = data;
-  }
- 
-  )
+  })
 }
 
 transform(productions: Production[], filterName:String, filterTip:String, filterTagline:string): any {

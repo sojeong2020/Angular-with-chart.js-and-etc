@@ -3,7 +3,7 @@
 </div>
 
 <div>
-   <app-table-search-form (searchValues)= dowork($event)></app-table-search-form>
+   <app-table-search-form (searchValues)= filterSearchValues($event)></app-table-search-form>
 </div>
 
 <section class="example-container">
@@ -11,8 +11,8 @@
   <table id="production-table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>id</th>
+          <th class="sortable-header" sortable="name" (sort)="onSort($event)"><!-- <mat-icon sortable="name" class="sortable-icon">arrow_upward</mat-icon> -->Name</th>
+          <th  class="sortable-header" sortable="id" (sort)="onSort($event)">id</th>
           <th>Brewers_Tips</th>
           <th>First_Brewed</th>
           <th>Tag Line</th>

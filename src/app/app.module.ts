@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FeatureModule } from './feature/feature.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -33,10 +33,11 @@ import { CardTwoComponent } from './index/card/card-two/card-two.component';
 import { TableFiveComponent } from './index/table/table-five/table-five.component';
 import { TableSevenComponent } from './index/table/table-seven/table-seven.component';
 import { TableEightComponent } from './index/table/table-eight/table-eight.component';
+import { TableSearchFormComponent } from './forms/table-search-form/table-search-form.component';
 
 import { PunkPipe } from '../shared/pipes/punk.pipe';
 import { SearchPunkPipe } from '../shared/pipes/searchPunk.pipe';
-import { TableSearchFormComponent } from './forms/table-search-form/table-search-form.component';
+import { SortableHeaderDirective } from '../shared/directives/sortable-header.directive';
 
 @NgModule({
   declarations: [
@@ -62,9 +63,12 @@ import { TableSearchFormComponent } from './forms/table-search-form/table-search
     CardTwoComponent,
     TableFiveComponent,
     TableSevenComponent,
+    TableEightComponent,
+
     PunkPipe,
     SearchPunkPipe,
-    TableEightComponent,
+    SortableHeaderDirective,
+
     TableSearchFormComponent
   ],
   imports: [
@@ -94,8 +98,6 @@ import { TableSearchFormComponent } from './forms/table-search-form/table-search
     CardComponent,
     TableOneComponent,
     TableSevenComponent,
-    PunkPipe,
-    SearchPunkPipe,
     TableSearchFormComponent
   ]
 })
