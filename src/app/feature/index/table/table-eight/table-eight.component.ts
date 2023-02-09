@@ -13,7 +13,7 @@ export class TableEightComponent implements OnInit {
   filterName!: string;
   filterTip!: string;
   filterTagline!: string;
-  
+  searchterm!: string;
   
   data: Production[]=[];
   productions: Production[]=[];
@@ -32,15 +32,18 @@ ngOnInit(): void {
   })
 }
 
+/*------ results form search form ------- */
 
-filterSearchValues(event:any){
-  console.log(event.value.filterName," filterName from table form data event")
-  console.log(event.value.filterTip," filterTip from table form data event")
-  console.log(event.value.filterTagline," filterTagline from table form data event")
+ filterSearchValues(event:any){
+  console.log(event.searchterm," searchterm from table form data event")
+  console.log(event.filterName," filterName from table form data event")
+  console.log(event.filterTip," filterTip from table form data event")
+  console.log(event.filterTagline," filterTagline from table form data event")
 
-this.filterName = event.value.filterName;
-this.filterTip = event.value.filterTip;
-this.filterTagline = event.value.filterTagline;
+this.searchterm = event.searchterm;
+this.filterName = event.filterName;
+this.filterTip = event.filterTip;
+this.filterTagline = event.filterTagline;
 }
 
 onSort({ column, direction }: SortEvent) {

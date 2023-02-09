@@ -23,28 +23,41 @@ export class SearchPunkPipe implements PipeTransform {
   )
 }
 
-transform(productions: Production[], filterName:String, filterTip:String, filterTagline:string): any {
+transform(productions: Production[], filterName:String, filterTip:String, filterTagline:string, searchterm:string): any {
 
-  if (productions && productions.length){
+  if(productions.length == 0 ){
+    return productions
+  }
+  else{
     return productions.filter(item =>{
-        if (filterName && item.name.toLowerCase().indexOf(filterName.toLowerCase()) === -1){
-            return false;
-        }
-        if (filterTip && item.brewers_tips.toLowerCase().indexOf(filterTip.toLowerCase()) === -1){
+      if (searchterm && 
+        item.description.toLowerCase().indexOf(searchterm.toLowerCase()) === -1 && 
+        item.name.toLowerCase().indexOf(searchterm.toLowerCase()) === -1
+        ){
+        return false;
+    }
+      if (filterName && item.name.toLowerCase().indexOf(filterName.toLowerCase()) === -1){
           return false;
       }
-        if (filterTagline && item.tagline.toLowerCase().indexOf(filterTagline.toLowerCase()) === -1){
-            return false;
-        }
+      if (filterTip && item.brewers_tips.toLowerCase().indexOf(filterTip.toLowerCase()) === -1){
+        return false;
+    }
+      if (filterTagline && item.tagline.toLowerCase().indexOf(filterTagline.toLowerCase()) === -1){
+          return false;
+      }
      
-        return true;
-   })
-}
-else{
-    return productions;
-}
-}
+      return true;
+    })
+  }
 
+  }
 
- 
+ /*  const searchedProductions = productions.filter(item =>{
+    return (
+      item.name.toLowerCase().includes(searchterm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchterm.toLowerCase()) 
+    );
+  });
+
+   return searchedProductions */
 }

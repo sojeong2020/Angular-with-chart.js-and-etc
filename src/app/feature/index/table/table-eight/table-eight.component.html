@@ -1,5 +1,5 @@
 <div>
-    <p class="table-title">(8)Reuse Pipe for multiple filter function & pass form data from parent component. search results display after submit button!</p>
+    <p class="table-title">(8)Reusable directive for sorting and Reusable Pipe for multiple filter function & pass form data from parent component. search results display after submit button! </p>
 </div>
 
 <div>
@@ -20,7 +20,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let production of productions | punkFilter: filterName: filterTip: filterTagline"  class="table-row">
+        <tr *ngFor="let production of productions | searchPunkFilter: filterName: filterTip: filterTagline: searchterm"  class="table-row">
 
           <td ><div class="table-cell">{{production.name}}</div></td>
           <td ><div class="table-cell">{{production.id}}</div></td>

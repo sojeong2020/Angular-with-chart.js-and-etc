@@ -1,14 +1,18 @@
 <form  [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="searchterm">Search</label>
+    <input type="text" id="searchterm" name="searchterm" formControlName="searchterm">
+  </div>
     <div>
-      <label for="filterName">filterName :</label>
+      <label for="filterName">filter By Name :</label>
       <input type="text" id="filterName" name="filterName" formControlName="filterName">
     </div>
     <div>
-        <label for="filterTip">filterTip :</label>
+        <label for="filterTip">filter By Tip :</label>
         <input type="text" id="filterTip" name="filterTip" formControlName="filterTip">
       </div>
     <div>
-      <label for="filterTagline">filterTagline :</label>
+      <label for="filterTagline">filter By Tagline :</label>
       <input type="text" id="filterTagline" name="filterTagline" formControlName="filterTagline">
     </div>
     <button type="submit">SEARCH</button>

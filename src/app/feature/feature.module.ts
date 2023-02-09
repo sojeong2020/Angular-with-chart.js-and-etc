@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../shared/navigation/angular-material.module';
-import { TableSixModule } from './index/table/table-six/tablesix.module';
 
 import { SessionModule } from './session/session.module';
 import { CustomerModule } from './customer/customer.module';
@@ -79,7 +78,6 @@ import { SortableHeaderDirective } from '../shared/directives/sortable-header.di
     SessionModule,
     CustomerModule,
     RouterModule,
-    TableSixModule
   ],
   exports:[
     CalendarComponent,

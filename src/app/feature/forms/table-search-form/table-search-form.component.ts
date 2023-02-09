@@ -13,6 +13,7 @@ export class TableSearchFormComponent implements OnInit {
   @Output() searchValues = new EventEmitter();
 
   searchForm = new FormGroup({
+    searchterm:new FormControl(),
     filterName:new FormControl(),
     filterTip:new FormControl(),
     filterTagline: new FormControl(),
@@ -26,7 +27,7 @@ constructor() { }
   onSubmit():void {
     console.warn('Your search term has been submitted this.searchForm.value', this.searchForm.value);
   
-    this.searchValues.emit(this.searchForm)
+    this.searchValues.emit(this.searchForm.value)
 
     this.searchForm.reset();                                    
   } 
