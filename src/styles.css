@@ -124,6 +124,8 @@ body {
       } */
       #sidenav{
        grid-column: 1;
+       box-shadow: 10px 10px 8px -10px black;
+     /* how to make the box shadow disappeared when the sidebar collapsed */
       }
       #content{
         grid-column: 1/3;
@@ -145,6 +147,10 @@ body {
       #sidenav.activeCollapsed {
         left: -100%;
       }
+      #sidenav.activeCollapsed .sidebar{
+
+      }
+     
       #content.activeCollapsed {
         filter:none;
       }
