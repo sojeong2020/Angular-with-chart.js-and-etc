@@ -147,9 +147,9 @@ body {
       #sidenav.activeCollapsed {
         left: -100%;
       }
-      #sidenav.activeCollapsed .sidebar{
+      /* #sidenav.activeCollapsed .sidebar{
 
-      }
+      } */
      
       #content.activeCollapsed {
         filter:none;

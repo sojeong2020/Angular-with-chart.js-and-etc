@@ -6,6 +6,8 @@ import { ChartComponent } from './feature/chartPunk/chart/chart.component';
 import { CalendarComponent } from './feature/calendar/calendar.component';
 import { TableComponent } from './feature/index/table/table.component';
 import { CardComponent } from './feature/index/card/card.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
 
@@ -24,7 +26,7 @@ const routes: Routes = [
 
    {path: '', component: HomeComponent},
 
-
+   {path: '**', redirectTo:'', component: PageNotFoundComponent}
 
 ];
 

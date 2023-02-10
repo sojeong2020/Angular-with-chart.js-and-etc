@@ -113,10 +113,10 @@ th[sortable].desc:before {
   }
   
   
-  @media (max-width:670px){
+  @media (max-width:600px){
     .example-table-container{
-      height: 400px;
-      width: 550px;
+      height:600px;
+      width:80%;
       overflow: auto; 
      
     }
