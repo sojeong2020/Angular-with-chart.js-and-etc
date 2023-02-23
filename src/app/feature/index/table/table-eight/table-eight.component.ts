@@ -26,7 +26,7 @@ export class TableEightComponent implements OnInit {
 
 ngOnInit(): void {
     this.dataService.getBeers().subscribe(result =>{
-      console.log(result,"result from table-three")
+      console.log(result,"result from table-eight")
       this.productions = result;
       this.data = result;
   })

@@ -30,9 +30,9 @@ transform(productions: Production[], filterName:String, filterTip:String, filter
   }
   else{
     return productions.filter(item =>{
-      if (searchterm && 
-        item.description.toLowerCase().indexOf(searchterm.toLowerCase()) === -1 && 
-        item.name.toLowerCase().indexOf(searchterm.toLowerCase()) === -1
+      if (searchterm &&
+        item.name.toLowerCase().indexOf(searchterm.toLowerCase()) === -1  &&
+        item.description.toLowerCase().indexOf(searchterm.toLowerCase()) === -1 
         ){
         return false;
     }

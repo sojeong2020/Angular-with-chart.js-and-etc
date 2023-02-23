@@ -8,6 +8,7 @@ import { TableComponent } from './feature/index/table/table.component';
 import { CardComponent } from './feature/index/card/card.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
+import { IndexComponent } from './mainfeature/public/index/index.component';
 
 const routes: Routes = [
 
@@ -15,6 +16,9 @@ const routes: Routes = [
   {path: 'calendar', component: CalendarComponent},
   {path: 'table', component: TableComponent},
   {path: 'card', component: CardComponent},
+  {path: 'home', component: HomeComponent},
+
+  {path: 'index', component: IndexComponent},
 
   
   {path: 'session', loadChildren:()=> 
@@ -24,8 +28,16 @@ const routes: Routes = [
    import('./feature/customer/customer.module')
    .then((m)=> m.CustomerModule)},
 
-   {path: '', component: HomeComponent},
+   
+   {path: 'admin', loadChildren:()=> 
+   import('./mainfeature/admin/admin.module')
+   .then((m)=> m.AdminModule)},
 
+   {path: 'provider', loadChildren:()=> 
+   import('./mainfeature/provider/provider.module')
+   .then((m)=> m.ProviderModule)},
+
+   { path: '', redirectTo: 'home', pathMatch: 'full' },
    {path: '**', redirectTo:'', component: PageNotFoundComponent}
 
 ];
